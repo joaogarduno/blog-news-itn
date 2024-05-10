@@ -41,7 +41,7 @@ License:
 
   /*  FONTS */
   --font-titles: "Oswald", sans-serif;
-  --font-text: "Raleway", sans-serif;
+  --font-text: "Lato", sans-serif;
 }
 
 /*  */
@@ -83,6 +83,7 @@ footer, header, hgroup, menu, nav, section {
 /* AGREGADOS AL RESET.CSS */
 html{
   background-color: var(--color-primary);
+  /* background-color: var(--color-secondary); */
   color: var(--color-text);
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -110,6 +111,9 @@ aside, figure, footer, div{
 }
 
 /*  */
+a{
+  text-decoration: none;
+}
 img{
   max-width: 100%;
 }
@@ -160,6 +164,133 @@ table {
   display: grid;
   place-content: center;
   place-items: center;
+}
+
+/* ================== */
+/* HEADER */
+.header-content{
+  position: relative;
+  top: 0;
+  background-color: var(--color-tertiary);
+}
+
+.nav-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: inherit;
+  top: inherit;
+  justify-content: space-between;
+
+}
+/* NAV - MENU */
+.burger-menu{
+  width: auto;
+  display: block;
+  cursor: pointer;
+}
+.burger-menu .lines{
+  width: 4rem;
+  height: .3rem;
+  margin: .5rem;
+  background-color: var(--color-primary);
+}
+
+/* ANIMATION LINES OF BURGER */
+
+/* LOGO */
+.logo-content{
+  /* outline: 1px solid red; */
+  width: auto;
+  display: block;
+}
+.logo-content a{
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center
+}
+
+/* FIGURE */
+.logo-content a figure{
+  width: 35%;
+}
+.logo-content a figure img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEXT */
+.logo-content a .logo-text{
+  /* outline: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+.logo-content a .logo-text span{
+  /* font-size: var(--size-xlg); */
+  /* letter-spacing: .3rem; */
+  color: var(--color-primary);
+  font-size: var(--size-lgr);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.logo-content a .logo-text span:last-child{
+  border-top: 1px solid var(--color-secondary);
+  /* color: var(--color-secondary); */
+  font-size: var(--size-xxxs);
+  text-transform: capitalize;
+}
+
+/* MENU */
+.menu-content{
+  width: 100vw;
+  height: 90vh;
+  position: absolute;
+  top: 13vh;
+  left: 0;
+  background-color: var(--color-menuresponsive);
+  /* transform: translateX(-100%); */
+  transition: transform 0.5s ease-in-out;
+}
+.menu-content ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu-content ul li{
+  width: 100%;
+  font-size: var(--size-sm);
+  text-transform: capitalize;
+  
+}
+.menu-content ul li a{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  padding: 1.5rem 0;
+  /* font-weight: bold; */
+  letter-spacing: 2px;
+  color: var(--color-secondary);
+}
+
+.nav-active{
+  transform: translateX(0%);
+}
+
+/* BURGER ANIMATION - CSS JS */
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 
