@@ -178,22 +178,50 @@ table {
   width: 100%;
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   position: inherit;
   top: inherit;
   justify-content: space-between;
 
 }
 /* NAV - MENU */
+=======
+  /* position: inherit; */
+  /* top: inherit; */
+  justify-content: space-between;
+
+}
+/* BURGER */
+>>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
 .burger-menu{
   width: auto;
   display: block;
   cursor: pointer;
 }
+<<<<<<< HEAD
 .burger-menu .lines{
+=======
+.lines{
+  border-radius: 20%;
+>>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
   width: 4rem;
   height: .3rem;
   margin: .5rem;
   background-color: var(--color-primary);
+<<<<<<< HEAD
+=======
+  transition: all 0.3s ease-in;
+}
+/* BURGER ANIMATION - CSS JS */
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px, -6px);
+>>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
 }
 
 /* ANIMATION LINES OF BURGER */
@@ -201,8 +229,14 @@ table {
 /* LOGO */
 .logo-content{
   /* outline: 1px solid red; */
+<<<<<<< HEAD
   width: auto;
   display: block;
+=======
+  /* width: 80%; */
+  width: auto;
+  /* display: block; */
+>>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
 }
 .logo-content a{
   display: flex;
@@ -247,11 +281,20 @@ table {
   width: 100vw;
   height: 90vh;
   position: absolute;
+<<<<<<< HEAD
   top: 13vh;
   left: 0;
   background-color: var(--color-menuresponsive);
   /* transform: translateX(-100%); */
   transition: transform 0.5s ease-in-out;
+=======
+  top: 14vh;
+  left: 0;
+  background-color: var(--color-menuresponsive);
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+>>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
 }
 .menu-content ul{
   width: 100%;
@@ -274,7 +317,11 @@ table {
   justify-content: center;  
   padding: 1.5rem 0;
   /* font-weight: bold; */
+<<<<<<< HEAD
   letter-spacing: 2px;
+=======
+  letter-spacing: 2.5px;
+>>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
   color: var(--color-secondary);
 }
 
@@ -282,6 +329,7 @@ table {
   transform: translateX(0%);
 }
 
+<<<<<<< HEAD
 /* BURGER ANIMATION - CSS JS */
 .toggle .line1{
   transform: rotate(-45deg) translate(-5px, 6px);
@@ -292,5 +340,8 @@ table {
 .toggle .line3{
   transform: rotate(45deg) translate(-5px, -6px);
 }
+=======
+
+>>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
 
 
