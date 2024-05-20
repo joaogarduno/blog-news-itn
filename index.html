@@ -12,16 +12,18 @@ Release date:
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <!-- INFO-DATA -->
   <meta name="description" content="School Institue">
-  <meta name="keywords" content="News, School,Gallery, Photos">
+  <meta name="keywords" content="News,School,Gallery,Photos">
   <meta name="author" content="The Gang of Six">
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <!-- ICONS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <!-- FAVICON -->
   <link rel="shortcut icon" type="image/x-icon" href="./img/logo-favicon.png">
   <!-- CSS -->
@@ -44,11 +46,11 @@ Release date:
         
         <!-- LOGO -->
         <div class="logo-content">
-          <a href="index.html">
-            <figure>
-              <img src="./img/logo-favicon.png" alt="">
-            </figure>
-            <div class="logo-text">
+          <a href="index.html" class="logo__content--a">
+            
+            <!--  -->
+            <img src="./img/logo-favicon.png" alt="">
+            <div class="logo__text">
               <span>itn</span>
               <span>formando generaciones</span>
             </div>
@@ -88,35 +90,239 @@ Release date:
   </header>
 
   <!-- BANNER -->
-  <section id="bannerContent" class="banner-content"></section>
+  <section id="bannerContent" class="banner-content">
+    <div id="bannerSlider" class="banner-slider">
+      
+      <div id="slideContent" class="slide-content">
+        <!-- SLIDE 1 -->
+        <div class="slides slide1">
+          <img src="https://images.pexels.com/photos/159579/crayons-coloring-book-coloring-book-159579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          <article class="slides-article">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae necessitatibus dolores blanditiis quo sunt hic?</p>
+            <button class="banner__article--button">leer mas</button>
+          </article>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slides slide2">
+          <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" alt="">
+          <article class="slides-article">
+            <h3 class="banner__article--h3">Bienvenido a Instituto Tierra Nueva</h3>
+            <p class="banner__article--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio labore, atque nobis quam tenetur aut.</p>
+            <button class="banner__article--button">Leer más</button>
+          </article>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slides slide3">
+          <img src="https://images.unsplash.com/photo-1602542165259-9a21c6ead80e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+          <article class="slides-article">
+            <h3 class="banner__article--h3">Conoce mas</h3>
+            <p class="banner__article--p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda id amet perspiciatis deserunt ipsam provident.</p>
+            <button class="banner__article--button">Leer más</button>
+          </article>
+        </div>
+
+        <!-- SLIDE 4 -->
+        <div class="slides slide4">
+          <img src="https://images.pexels.com/photos/159213/hall-congress-architecture-building-159213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          <article class="slides-article">
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore esse consequatur ipsum aperiam voluptatum nam?</p>
+            <button class="banner__article--button">leer mas</button>
+          </article>
+        </div>
+
+        <!-- CONTROLS -->
+        <span id="btnSlidePrev" class="btn__slider btn__slider--left">
+          <i class='bx bx-chevron-left'></i>
+        </span>
+        <span id="btnSlideNext" class="btn__slider btn__slider--right">
+          <i class='bx bxs-chevron-right'></i>
+        </span>
+        
+      </div>
+
+    </div>
+  </section>
 
   <!-- MAIN -->
-  <main>
+  <main id="mainContent" class="main-content">
 
     <!-- NEWS -->
-    <section id="newsContent"></section>
+    <section id="newsContent" class="section-content news-content">
+      
+      <div class="container">
+        <h1>noticias</h1>
+        <div class="row-container news-row">
+          
+          <div class="col-container news-col">
+            <figure>
+              <img src="https://images.pexels.com/photos/4019754/pexels-photo-4019754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </figure>
+            <article id="articleContent" class="article-content">
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptate necessitatibus ut, vero aliquid harum. Animi blanditiis consequatur temporibus quisquam!</p>
+              <button>leer más</button>
+            </article>
+          </div>
+
+          <div class="col-container news-col">
+            <figure>
+              <img src="https://images.pexels.com/photos/1165607/pexels-photo-1165607.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </figure>
+            <article id="articleContent" class="article-content">
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptate necessitatibus ut, vero aliquid harum. Animi blanditiis consequatur temporibus quisquam!</p>
+              <button>leer más</button>
+            </article>
+          </div>
+
+          <div class="col-container news-col">
+            <figure>
+              <img src="https://images.pexels.com/photos/1720186/pexels-photo-1720186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </figure>
+            
+            <article id="articleContent" class="article-content">
+              <h2>Lorem ipsum dolor sit amet.</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptate necessitatibus ut, vero aliquid harum. Animi blanditiis consequatur temporibus quisquam!</p>
+              <button>leer más</button>
+            </article>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
 
     <!-- EVENT -->
-    <section id="eventsContent"></section>
+    <section id="eventsContent" class="section-content events-content">
+      <div class="container"></div>
+    </section>
 
     <!-- GALLERY -->
-    <section id="gallerysContent"></section>
+    <section id="gallerysContent" class="section-content gallery-content">
+      <div class="container">
+
+        <h1>galeria</h1>
+        <div class="row-container galle-row">
+
+          <div class="col-container galle-col">
+            <img src="https://images.pexels.com/photos/8926648/pexels-photo-8926648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+
+          <div class="col-container">
+            <img src="https://images.pexels.com/photos/5211446/pexels-photo-5211446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+
+          <div class="col-container">
+            <img src="https://images.pexels.com/photos/1370298/pexels-photo-1370298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+
+          <div class="col-container">
+            <img src="https://images.pexels.com/photos/4261788/pexels-photo-4261788.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+
+          <div class="col-container">
+            <img src="https://images.pexels.com/photos/5212338/pexels-photo-5212338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+
+          <div class="col-container">
+            <img src="https://images.pexels.com/photos/1181534/pexels-photo-1181534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <!-- SPORTS SCHOOL -->
-    <section id="sportsContent"></section>
+    <section id="sportsContent" class="section-content sport-content">
+      <div class="container">
+        <div class="row-container">
+          .col-container*
+        </div>
+      </div>
+    </section>
 
     <!-- INSTITUTE -->
-    <section id="instituteContent"></section>
+    <section id="instituteContent" class="section-content institute-content">
+      <div class="container">
+        <div class="row-container">
+          .col-container*
+        </div>
+      </div>
+    </section>
 
     <!-- CONTACT -->
-    <section id="contactContent"></section>
+    <section id="contactContent" class="section-content contact-content">
+      <div class="container">
+
+        <div class="row-container">
+          <div class="col-container">
+            <h4>acerca</h4>
+            <ul>
+              <li><a href="">instituto</a></li>
+              <li><a href="">inscripciones</a></li>
+              <li><a href="">niveles educativos</a></li>
+            </ul>
+          </div>
+
+          <div class="col-container">
+            <h4>servicios</h4>
+            <ul>
+              <li><a href="">inscripciones</a></li>
+              <li><a href="">colegiaturas</a></li>
+              <li><a href="">oferta educativa</a></li>
+            </ul>
+          </div>
+
+          <div class="col-container">
+            <h4>social</h4>
+            <ul>
+              <li><a href="">facebook</a></li>
+              <li><a href="">instagram</a></li>
+              <li><a href="">youtube</a></li>
+            </ul>
+          </div>
+
+          <div class="col-container">
+            <h4>info</h4>
+            <ul>
+              <li><a href="">preescolar</a></li>
+              <li><a href="">primaria</a></li>
+              <li><a href="">secundaria</a></li>
+              <li><a href="">preparatoria</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer id="footerContent" class="footer-content"></footer>
+  <footer id="footerContent" class="footer-content">
+    <div class="container">
+      <div class="row-container">
+        <div class="col-container">
+          <!-- SOCIAL MEDIA -->
+          <span><i class='bx bxl-facebook' ></i></span>
+          <span><i class='bx bxl-instagram' ></i></span>
+          <span><i class='bx bxl-youtube' ></i></span>
+        </div>
+        
+        <div class="col-container">
+          <p>Copyright<span><i class='bx bx-copyright'></i></span> 2024  Instituto Tierra Nueva - Todos los derechos reservados</p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
 
   <!-- SCRIPT -->
   <script type="text/javascript" src="./js/menu.js"></script>
+  <script type="text/javascript" src="./js/slides.js"></script>
 </body>
 </html>

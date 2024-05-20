@@ -44,7 +44,9 @@ License:
   --font-text: "Lato", sans-serif;
 }
 
-/*  */
+ /* ---------------------------------------------
+    RESET CSS
+ ----------------------------------------------- */
 *, ::after, ::before{
   box-sizing: border-box;
 }
@@ -81,6 +83,9 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* AGREGADOS AL RESET.CSS */
+html, body{
+  height: 100%;
+}
 html{
   background-color: var(--color-primary);
   /* background-color: var(--color-secondary); */
@@ -93,8 +98,15 @@ body {
   font-family: var(--font-text);
   font-size: var(--size-smr);
 	line-height: 1.5;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
+
+/* SEMANTIC - HTML */
+header, nav, main, section, article,
+aside, figure, footer, div{
+  width: 100%;
+}
+
 /* TITLES */
 h1,h2, h3, h4, h5, h6{
   font-family: var(--font-titles);
@@ -104,10 +116,8 @@ h1,h2, h3, h4, h5, h6{
   text-transform: capitalize;
 }
 
-/* SEMANTIC - HTML */
-header, nav, main, section, article,
-aside, figure, footer, div{
-  width: 100%;
+p, h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
 }
 
 /*  */
@@ -116,6 +126,7 @@ a{
 }
 img{
   max-width: 100%;
+  object-fit: cover;
 }
 button{
   border: none;
@@ -141,14 +152,30 @@ table {
 	border-spacing: 0;
 }
 
-/* CONTAINER */
+ /* ---------------------------------------------
+    CONTAINER
+ ----------------------------------------------- */
 .container{
   max-width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* ROW - COL - CONTAINER */
+/* ---------------------------------------------
+  SEMANTIC - CONTAINERS
+----------------------------------------------- */
+/* .mainContent, .sectionContent, .articleContent, .asideContent, .footerContent */
+.main-content{
+  display: grid;
+  /* grid-template: repeat(6, 1fr) / auto; */
+  place-content: center;
+  place-items: center;
+  gap: 4.5rem 0;
+}
+
+/* ---------------------------------------------
+  ROWS & COLUMNS
+ ----------------------------------------------- */
 .row-container, .col-container{
   max-width: 100%;
 }
@@ -158,60 +185,47 @@ table {
   place-items: center;
 }
 
-/*  */
-/* .mainContent, .sectionContent, .articleContent, .asideContent, .footerContent */
-.mainContent{
-  display: grid;
-  place-content: center;
-  place-items: center;
-}
-
-/* ================== */
+/* ---------------------------------------------
+  HEADER - CONTENT
+----------------------------------------------- */
 /* HEADER */
 .header-content{
+  /* position: absolute; */
   position: relative;
   top: 0;
+  z-index: 1;
   background-color: var(--color-tertiary);
 }
 
-.nav-content{
+.header-content > .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-content > .container .nav-content{
   width: 100%;
   display: flex;
   align-items: center;
-<<<<<<< HEAD
-  position: inherit;
-  top: inherit;
   justify-content: space-between;
+  /* position: inherit;
+  top: inherit; */
 
 }
 /* NAV - MENU */
-=======
-  /* position: inherit; */
-  /* top: inherit; */
-  justify-content: space-between;
-
-}
-/* BURGER */
->>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
 .burger-menu{
+  /* outline: 1px solid red; */
   width: auto;
   display: block;
   cursor: pointer;
 }
-<<<<<<< HEAD
 .burger-menu .lines{
-=======
-.lines{
-  border-radius: 20%;
->>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
   width: 4rem;
   height: .3rem;
   margin: .5rem;
   background-color: var(--color-primary);
-<<<<<<< HEAD
-=======
-  transition: all 0.3s ease-in;
 }
+
+/* ANIMATION LINES OF BURGER */
 /* BURGER ANIMATION - CSS JS */
 .toggle .line1{
   transform: rotate(-45deg) translate(-5px, 6px);
@@ -221,47 +235,37 @@ table {
 }
 .toggle .line3{
   transform: rotate(45deg) translate(-5px, -6px);
->>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
 }
-
-/* ANIMATION LINES OF BURGER */
 
 /* LOGO */
 .logo-content{
   /* outline: 1px solid red; */
-<<<<<<< HEAD
-  width: auto;
+  /* width: auto; */
+  width: 80%;
   display: block;
-=======
-  /* width: 80%; */
-  width: auto;
-  /* display: block; */
->>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
+  cursor: pointer;
 }
-.logo-content a{
+.logo-content > a{
+  /* outline: 1px solid red; */
   display: flex;
   /* flex-direction: column; */
   align-items: center;
   justify-content: center
 }
+.logo-content > a img{
+  width: 30%;
+}
 
-/* FIGURE */
-.logo-content a figure{
-  width: 35%;
-}
-.logo-content a figure img{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 /* TEXT */
-.logo-content a .logo-text{
+.logo-content > a .logo__text{
   /* outline: 1px solid red; */
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
 }
-.logo-content a .logo-text span{
+.logo-content > a .logo__text span{
   /* font-size: var(--size-xlg); */
   /* letter-spacing: .3rem; */
   color: var(--color-primary);
@@ -269,79 +273,370 @@ table {
   text-transform: uppercase;
   font-weight: bold;
 }
-.logo-content a .logo-text span:last-child{
+.logo-content > a .logo__text span:last-child{
   border-top: 1px solid var(--color-secondary);
   /* color: var(--color-secondary); */
   font-size: var(--size-xxxs);
+  font-size: var(siz);
   text-transform: capitalize;
 }
 
 /* MENU */
 .menu-content{
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   position: absolute;
-<<<<<<< HEAD
-  top: 13vh;
+  top: 7rem;
   left: 0;
   background-color: var(--color-menuresponsive);
-  /* transform: translateX(-100%); */
-  transition: transform 0.5s ease-in-out;
-=======
-  top: 14vh;
-  left: 0;
-  background-color: var(--color-menuresponsive);
-  z-index: 1000;
   transform: translateX(-100%);
-  transition: transform 0.5s ease-in;
->>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
+  transition: transform 0.5s ease-in-out;
+  /* z-index: 1.5; */
+  z-index: 1000;
 }
-.menu-content ul{
+.menu-content > ul{
+  /* outline: 1px solid red; */
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  /* gap: .1rem 0; */
+  
 }
-.menu-content ul li{
+.menu-content > ul li{
+  /* outline: 1px solid red; */
   width: 100%;
+  /* height: 1%; */
   font-size: var(--size-sm);
   text-transform: capitalize;
   
 }
 .menu-content ul li a{
+  /* outline: 1px solid red; */
   width: 100%;
+  /* padding: 1.5rem 0; */
   display: flex;
   align-items: center;
   justify-content: center;  
-  padding: 1.5rem 0;
-  /* font-weight: bold; */
-<<<<<<< HEAD
-  letter-spacing: 2px;
-=======
-  letter-spacing: 2.5px;
->>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
   color: var(--color-secondary);
+  letter-spacing: .2rem;
+  /* font-weight: bold; */
 }
 
 .nav-active{
   transform: translateX(0%);
 }
 
-<<<<<<< HEAD
-/* BURGER ANIMATION - CSS JS */
-.toggle .line1{
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-.toggle .line2{
-  opacity: 0;
-}
-.toggle .line3{
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-=======
+/* ---------------------------------------------
+    BANNER - SLIDER
+----------------------------------------------- */
+ .banner-content{
+  /* outline: 1px solid red; */
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+ }
+ .banner-slider{
+  width: 100%;
+ }
 
->>>>>>> 0ae6b7e (Estructura 3: Estructura y Diseño del HEADER, NAV, BURGER, LOGO, MENU - HTML & CSS)
+ /*  */
+ .slide-content{
+  width: 400%;
+  height: 90vh;
+  margin-left: -100%;
+  display: flex;
+ }
+
+ /*  */
+ .slide-content .slides{
+  position: relative;
+  width: 100%;
+  background-color: rgba(#FFFFFF, #FFFFFF, #FFFFFF 0.5);
+ }
+
+ /*  */
+.slides img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* object-fit: cover; */
+}
+.slides article{
+  /* outline: 1px solid red; */
+  /* height: 50%; */
+  /* display: block; */
+  position: absolute;
+  top: 45%;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem 1rem;
+  /* padding-top: 1.5rem; */
+}
+.slides > article h3{
+  padding-bottom: 1.5rem;
+  color: var(--color-secondary);
+  text-transform: capitalize;
+
+}
+.slides > article p{
+  padding-bottom: 2rem;
+  color: var(--color-primary);
+  line-height: 1.4;
+}
+.slides > article button{
+  width: 9rem;
+  height: 3rem;
+  border-radius: 5rem;
+  font-size: var(--size-xxxs);
+  text-transform: capitalize;
+}
+
+.btn__slider{
+  /* outline: 1px solid red; */
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  /* left: 0; */
+  cursor: pointer;
+  background-color: #f2e6cba5;
+  font-size: var(--size-lgr);
+  border-radius: 2rem;
+  z-index: 500;
+  /* z-index: 1; */
+}
+
+.btn__slider--left{
+  left: 0;
+}
+.btn__slider--right{
+  right: 0;
+}
+
+/* ---------------------------------------------
+  NEWS - CONTENT
+----------------------------------------------- */
+.news-content{
+  margin: 2rem 0;
+}
+
+/*  */
+.news-row{
+  outline: 1px solid red;
+  grid-template: repeat(3, 1fr) / auto;
+  gap: 2rem 0;
+}
+.news-col{
+  background-color: var(--color-tertiary);
+  border-radius: 2rem;
+  padding: 2rem 0;
+}
+/* .news-col figure{} */
+.news-col article{
+  padding: 1rem;
+}
+.news-col article h2{
+  padding-top: 1rem;
+}
+/* .news-col article p{} */
+.news-col article button{
+  color: var(--color-tertiary);
+  background-color: var(--color-primary);
+  text-transform: capitalize;
+  width: 9rem;
+  height: 3rem;
+  font-size: var(--size-xxs);
+  border-radius: 2rem;
+  margin-top: 2rem;
+}
+
+/* ---------------------------------------------
+  EVENTS - CONTENT
+----------------------------------------------- */
+
+/* ---------------------------------------------
+  GALLERY - CONTENT
+----------------------------------------------- */
+
+/* ---------------------------------------------
+  SPORTS - CONTENT
+----------------------------------------------- */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------
+    MEDIAQUERIES
+ ----------------------------------------------- */
+/* ---------------- 480PX ------------------- */
+@media screen and (min-width: 480px){
+  /* BURGER */
+  .burger-menu{
+    outline: 1px solid red;
+    /* width: 30%; */
+  }
+
+  /* LOGO */
+  .logo-content{
+    width: 70%;
+  }
+  .logo-content > a img{
+    width: 25%;
+  }
+  .logo-content a .logo__text span{
+    font-size: var(--size-xlg);
+    width: 60%;
+  }
+
+  /* MENU */
+  .menu-content{
+    /* transform: translateX(0%); */
+    top: 8rem;
+  }
+  .menu-content > ul{
+    outline: 1px solid red;
+  }
+  .menu-content ul li{
+    outline: 1px solid red;
+    font-size: var(--size-md);
+    /* font-size: var(--size-lg); */
+  }
+  .menu-content ul li a{
+    letter-spacing: .3rem;
+
+  }
+
+}
+/* ---------------- 576PX ------------------- */
+@media screen and (min-width: 576px){
+  /* BURGER */
+  /* .burger-menu{} */
+
+  /* LOGO */
+  /* .logo-content{} */
+  /* .logo-content > a{} */
+  /* .logo-content > a img{} */
+  /* .logo-content > a .logo__text{} */
+  .logo-content > a .logo__text span{
+    font-size: var(--size-xlg);
+  }
+  .logo-content > a .logo__text span:last-child{
+    font-size: var(--size-xxs);
+  }
+
+  /* MENU */
+  .menu-content{
+    top: 10rem;
+  }
+}
+
+/* ---------------- 768PX ------------------- */
+@media screen and (min-width: 768px){
+  /* BURGER */
+  .burger-menu{
+    display: none;
+  }
+
+  /* LOGO */
+  .logo-content{
+    outline: 1px solid red;
+    width: 40%;
+  }
+
+  /* MENU */
+  .menu-content{
+    position: static;
+    transform: translateX(-0%);
+    /* width: 60%; */
+    /* width: 60%; */
+    width: 70vw;
+    height: auto;
+    background-color: var(--color-tertiary);
+    /* position: static; */
+  }
+  .menu-content > ul{
+    flex-direction: row;
+  }
+  .menu-content > ul li{
+    font-size: var(--size-sm);
+  }
+  .menu-content ul li a{
+    color: var(--color-primary);
+  }
+
+  /* NEWS */
+}
+
+/* ---------------- 992PX ------------------- */
+/* @media screen and (main-width:992){} */
+
+/* ---------------- 1024PX ------------------- */
+@media screen and (min-width: 1024px){
+  .container{
+    max-width: 95%;
+  }
+
+  /* LOGO */
+  .logo-content{
+    width: 40%;
+  }
+  .logo-content > a img{
+    width: 35%;
+  }
+  .logo-content > a .logo__text span{
+    font-size: var(--size-xlg);
+  }
+
+  /* MENU */
+  .menu-content{
+    width: 60vw;
+  }
+  .menu-content ul li a{
+    font-weight: bold;
+  }
+
+  /* NEWS */
+  .news-content h1{
+    color: var(--color-tertiary);
+  }
+  .news-row{
+    grid-template: auto / repeat(3, 1fr);
+    gap: 0 2rem;
+  }
+
+  /* GALLERY */
+  /* .gallery-content{} */
+  .gallery-content h1{
+    color: var(--color-tertiary);
+  }
+  .galle-row{
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .galle-col{}
+
+  /* FOOTER */
+  .footer-content{}
+}
+
+/* ---------------- 1200PX ------------------- */
+@media screen and (min-width: 1200px){}
+
+/* ---------------- 1400PX ------------------- */
+@media screen and (min-width: 1400px){}
